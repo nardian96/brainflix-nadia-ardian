@@ -1,10 +1,24 @@
 import React from 'react';
-import logo from '../assets/logo/Logo-brainflix.png'
+import SearchBar from './SearchBar';
+import Button from './Button'
+import UserPicture from './UserPicture';
 
-const Header = () => {
+
+import '../styles/app.css';
+
+const Header = (props) => {
+    const buttonValue = `UPLOAD`
     return (
-        <header className="header">
-            <img src={logo} alt="Brainflix Logo" />
+        <header className="header__container">
+            <div className="header__logo-container">
+                <img className="header__logo" src={props.logo} alt="Brainflix Logo" />
+            </div>
+
+            < SearchBar />
+            <div className="subheader__container">
+                < Button value={buttonValue}/>
+                < UserPicture />
+            </div>
         </header>
     )
 }
