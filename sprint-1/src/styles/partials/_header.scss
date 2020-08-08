@@ -31,18 +31,18 @@ header {
     }
 }
 
-.image {
-    &__item {
-        width: 50px;
-        height: 50px ;
-        border-radius: 50%;
-        background-color: #AFAFAF; 
-        &--user {
-            object-fit: cover;
-            object-position: left center;
-        }
-    }
-}
+// .image {
+//     &__item {
+//         width: 50px;
+//         height: 50px ;
+//         border-radius: 50%;
+//         background-color: #AFAFAF; 
+//         &--user {
+//             object-fit: cover;
+//             object-position: left center;
+//         }
+//     }
+// }
 
 .subheader {
     &__container {
@@ -55,8 +55,7 @@ header {
 
 .button {
     width: 80%;
-    background-color:$button-color;
-    color: white;
+    @include button;
 }
 
 //TABLET STYLING

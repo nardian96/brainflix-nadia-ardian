@@ -47,10 +47,10 @@ h4, p {
   font-family: 'Avenir-Regular';
 }
 
-h5 {
+h5, ::before {
   font-size: 0.75rem;
   line-height: 1.25rem;
-  font-family: 'Avenir-Bold';
+  font-family: 'Avenir-Demi';
 }
 
 @media screen and (min-width: 768px) and (min-width: 1440px) {
@@ -74,11 +74,29 @@ h5 {
     line-height: 1.37rem;
     font-family: 'Avenir-Regular';
   }
-  h5 {
+  h5, ::before {
     font-size: 0.75rem;
     line-height: 1.25rem;
     font-family: 'Avenir Bold';
   }
+}
+
+.image__item {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #E1E1E1;
+}
+
+.image__item--user {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left center;
+     object-position: left center;
+}
+
+.extra-padding {
+  padding-top: 1.5rem;
 }
 
 header {
@@ -125,20 +143,6 @@ header {
   width: 100%;
 }
 
-.image__item {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #AFAFAF;
-}
-
-.image__item--user {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: left center;
-     object-position: left center;
-}
-
 .subheader__container {
   width: 100%;
   display: -webkit-box;
@@ -153,7 +157,10 @@ header {
 .button {
   width: 80%;
   background-color: #0095FF;
-  color: white;
+  color: #FFFFFF;
+  font-family: 'Avenir-Demi';
+  border: none;
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -324,6 +331,151 @@ header {
        object-fit: contain;
     width: 65%;
     height: 100%;
+  }
+}
+
+.comment__section {
+  margin: 0 1rem;
+}
+
+.comment__input {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.comment__data {
+  list-style-type: none;
+  padding: 0;
+  border-bottom: 2px solid #E1E1E1;
+}
+
+.input__container {
+  width: 13.86rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.input__container--header::before {
+  content: "JOIN THE CONVERSATION";
+  font-size: 0.75rem;
+  padding-bottom: 3px;
+  color: #AFAFAF;
+}
+
+.input__box {
+  width: 100%;
+  height: 6.5rem;
+  border: 3px solid #0095FF;
+  border-radius: 5px;
+  padding: 1rem 0.75rem 0;
+  margin-bottom: 1rem;
+  font-family: 'Avenir-Regular';
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+}
+
+.input__button {
+  width: 100%;
+  height: 2.7rem;
+  background-color: #0095FF;
+  color: #FFFFFF;
+  font-family: 'Avenir-Demi';
+  border: none;
+  border-radius: 5px;
+}
+
+.data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem 0 1.5rem;
+  border-top: 2px solid #E1E1E1;
+}
+
+.data__content {
+  min-width: 14rem;
+  padding-left: 1rem;
+}
+
+.data__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.data__header p {
+  margin: 0;
+}
+
+.data__header--name {
+  font-weight: bold;
+}
+
+.data__header--date {
+  color: #AFAFAF;
+}
+
+@media screen and (min-width: 768px) {
+  .comment__section {
+    margin: 0 1.5rem;
+  }
+  .comment__input {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .comment__input form {
+    width: 40rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .input__box {
+    width: 27.5rem;
+    height: 2.7rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    font-size: 0.78rem;
+  }
+  .input__button {
+    width: 10rem;
+    margin: 1.4rem 2rem 0 1rem;
+  }
+  .data__content {
+    width: 39rem;
+    padding-left: 0;
+    padding-right: 2.8rem;
+    margin-right: 1.2rem;
+  }
+  .data__header {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .data__header--date {
+    padding-left: 0.8rem;
   }
 }
 

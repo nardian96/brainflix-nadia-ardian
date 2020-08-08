@@ -4,20 +4,22 @@ import CommentData from '../CommentSection/CommentData'
 
 const CommentSection = (props) => {
     return (
-        <div>
-            <div>
-
-            </div>
-            <div>
-                < UserPicture />
+        <section className='comment__section'>
+            <p>
+                3 comments
+            </p>
+            <div className='comment__input'>
+                <div className='extra-padding'>
+                    < UserPicture />
+                </div>
                 <form>
-                    <div className="form-message__container form-message__container--comment">
-                        <textarea name="comment" className="form-message__comment" placeholder="Add a new comment"></textarea>
+                    <div className='input__container input__container--header'>
+                        <textarea name="comment" className="input__box" placeholder="That was easily the most spectacular BMX moment ever."></textarea>
                     </div>
-                    <button type ="submit" className="form-message__submit">COMMENT</button>
+                    <button type ="submit" className="input__button">COMMENT</button>
                 </form>
             </div>
-            <ul>
+            <ul className='comment__data'>
                 {props.comments.map((comment) => (
                     <CommentData key={comment.id} commentData={comment} />
                 ))}
@@ -29,7 +31,7 @@ const CommentSection = (props) => {
                     </li>
                 ))} */}
             </ul>
-        </div>
+        </section>
     )
 }
 

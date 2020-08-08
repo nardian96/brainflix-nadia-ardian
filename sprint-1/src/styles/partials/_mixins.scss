@@ -9,3 +9,11 @@
         @content
     }
 }
+
+@mixin button {
+    background-color: $button-color;
+    color: $button-text-color;
+    font-family: 'Avenir-Demi';
+    border: none;
+    border-radius: 5px;
+}

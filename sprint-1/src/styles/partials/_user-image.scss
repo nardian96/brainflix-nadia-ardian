@@ -1,0 +1,17 @@
+//MOBILE SYLING
+.image {
+    &__item {
+        width: 50px;
+        height: 50px ;
+        border-radius: 50%;
+        background-color: #E1E1E1; 
+        &--user {
+            object-fit: cover;
+            object-position: left center;
+        }
+    }
+}
+
+.extra-padding {
+    padding-top: 1.5rem;
+}

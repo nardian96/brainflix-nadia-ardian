@@ -31,10 +31,10 @@ h4, p {
   font-family: 'Avenir-Regular'
 }
 
-h5 {
+h5, ::before {
   font-size: 0.75rem;
   line-height: 1.25rem;
-  font-family: 'Avenir-Bold';
+  font-family: 'Avenir-Demi';
 }
 
 //TABLET AND DESKTOP STYLING
@@ -60,7 +60,7 @@ h5 {
       line-height: 1.37rem;
       font-family: 'Avenir-Regular'
     }
-    h5 {
+    h5, ::before {
       font-size: 0.75rem;
       line-height: 1.25rem;
       font-family: 'Avenir Bold'
