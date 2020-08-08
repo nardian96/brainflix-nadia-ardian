@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Avenir-Bold';
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.woff2) format("woff2"), url(../assets/fonts/AvenirNextLTPro-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Avenir-Demi';
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.woff2) format("woff2"), url(../assets/fonts/AvenirNextLTPro-Demi.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Avenir-Regular';
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.woff2) format("woff2"), url(../assets/fonts/AvenirNextLTPro-Regular.woff) format("woff");
+}
+
 html,
 body {
   margin: 0;
@@ -12,6 +27,58 @@ body {
 *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: 'Avenir-Bold';
+}
+
+h2 {
+  font-size: 0.87rem;
+  line-height: 1.37rem;
+  font-family: 'Avenir-Demi';
+}
+
+h4, p {
+  font-size: 0.81rem;
+  line-height: 1.12rem;
+  font-family: 'Avenir-Regular';
+}
+
+h5 {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: 'Avenir-Bold';
+}
+
+@media screen and (min-width: 768px) and (min-width: 1440px) {
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: 'Avenir-Bold';
+  }
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: 'Avenir-Bold';
+  }
+  h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: 'Avenir-Demi';
+  }
+  h4, p {
+    font-size: 0.87rem;
+    line-height: 1.37rem;
+    font-family: 'Avenir-Regular';
+  }
+  h5 {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-family: 'Avenir Bold';
+  }
 }
 
 header {
@@ -143,5 +210,153 @@ header {
   .header__logo-container {
     margin-right: 32rem;
   }
+}
+
+.video__container {
+  width: 20rem;
+  height: 11.43rem;
+  background-color: black;
+}
+
+.video__item {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.video__description {
+  margin: 0 1rem;
+  border-bottom: 2px solid #E1E1E1;
+}
+
+.description__header {
+  margin: 2rem 0 1rem;
+}
+
+.description__subheader-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 10rem;
+}
+
+.description__subheader-one p {
+  margin: 0;
+  padding-top: 2px;
+  padding-left: 0.5rem;
+}
+
+.description__subheader-one h5 {
+  margin: 0;
+  font-size: 0.87rem;
+  font-family: 'Avenir-Demi';
+}
+
+.description__subheader-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 10rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 0 1.5rem;
+}
+
+.description__subheader-two p {
+  margin: 0;
+}
+
+.description__text {
+  margin: 1.5rem 1rem 2.5rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .video__container {
+    width: 48rem;
+    height: 25rem;
+  }
+  .video__item {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 90%;
+    height: 100%;
+  }
+  .video__description {
+    margin: 0 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .description__header {
+    margin: 3rem 0 1.5rem;
+  }
+  .description__subheader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .description__subheader-two {
+    padding-top: 0;
+  }
+  .description__text {
+    margin: 2.5rem 1.5rem 4rem 1.5rem;
+    padding-right: 14.5rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .video__container {
+    width: 90rem;
+    height: 33.75rem;
+  }
+  .video__item {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 65%;
+    height: 100%;
+  }
+}
+
+.video__list {
+  padding: 0 1rem;
+  width: 20rem;
+  list-style-type: none;
+}
+
+.video__item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.75rem 0;
+}
+
+.video__item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 7.5rem;
+  height: 4.37rem;
+}
+
+.video__item-text {
+  width: 12.5rem;
+}
+
+.video__item-text h3 {
+  margin: 0;
+}
+
+.video__item-text p {
+  margin: 0;
 }
 /*# sourceMappingURL=app.css.map */

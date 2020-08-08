@@ -1,0 +1,104 @@
+//MOBILE STYLING
+
+.video {
+    &__container {
+        width: 20rem;
+        height: 11.43rem;
+        background-color:black;
+    }
+    &__item {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    &__description {
+        margin: 0 1rem;
+        border-bottom: 2px solid $text-field-border;
+    }
+}
+
+.description {
+    &__header {
+        margin: 2rem 0 1rem;
+    }
+    &__subheader-one {
+        display: flex;
+        width: 10rem;
+        p {
+            margin: 0;
+            padding-top: 2px;
+            padding-left: 0.5rem;
+        }
+        h5 {
+            margin: 0;
+            font-size: 0.87rem;
+            font-family: 'Avenir-Demi'
+        }
+    }
+    &__subheader-two {
+        display:flex;
+        width: 10rem;
+        justify-content: space-between;
+        padding: 2rem 0 1.5rem;
+        p {
+            margin: 0;
+        }
+    }
+    &__text {
+        margin: 1.5rem 1rem 2.5rem 1rem;
+    }
+}
+
+//TABLET STYLING 
+
+@include tablet {
+    .video {
+        &__container {
+            width: 48rem;
+            height: 25rem;
+        }
+        &__item {
+            object-fit: contain;
+            width: 90%;
+            height: 100%;
+        }
+        &__description {
+            margin: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .description {
+        &__header {
+            margin: 3rem 0 1.5rem;
+        }
+        &__subheader {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__subheader-two {
+            padding-top: 0;
+        }
+        &__text {
+            margin: 2.5rem 1.5rem 4rem 1.5rem;
+            padding-right: 14.5rem;
+            line-height: 1.25rem;
+        }
+    }
+}
+
+//DESKTOP STYLING
+
+@include desktop {
+    .video {
+        &__container {
+            width: 90rem;
+            height: 33.75rem;
+        }
+        &__item {
+            object-fit: contain;
+            width: 65%;
+            height: 100%;
+        }
+    }
+}

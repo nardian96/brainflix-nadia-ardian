@@ -1,0 +1,28 @@
+//MOBILE STYLING
+
+.video {
+    &__list {
+        padding: 0 1rem;
+        width: 20rem;
+        list-style-type: none;
+    }
+    &__item {
+        width: 100%;
+        display: flex;
+        padding: 0.75rem 0;
+        img {
+            object-fit: cover;
+            width: 7.5rem;
+            height: 4.37rem;
+        }
+    }
+    &__item-text {
+        width: 12.5rem;
+        h3 {
+            margin: 0;
+        }
+        p {
+            margin: 0;
+        }
+    }
+}

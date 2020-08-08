@@ -12,3 +12,59 @@ body {
   box-sizing: inherit;
 }
 
+//MOBILE STYLING
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: 'Avenir-Bold';
+}
+
+h2 {
+  font-size: 0.87rem;
+  line-height: 1.37rem;
+  font-family: 'Avenir-Demi';
+}
+
+h4, p {
+  font-size: 0.81rem;
+  line-height: 1.12rem;
+  font-family: 'Avenir-Regular'
+}
+
+h5 {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: 'Avenir-Bold';
+}
+
+//TABLET AND DESKTOP STYLING
+@include tablet {
+  @include desktop {
+    h1 {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      font-family: 'Avenir-Bold';
+    }
+    h2 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-family: 'Avenir-Bold'
+    }
+    h3 {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-family: 'Avenir-Demi';
+    }
+    h4, p {
+      font-size: 0.87rem;
+      line-height: 1.37rem;
+      font-family: 'Avenir-Regular'
+    }
+    h5 {
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+      font-family: 'Avenir Bold'
+    }
+  }
+}
+
