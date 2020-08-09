@@ -3,13 +3,11 @@ import React, { Component } from 'react';
 import Header from './components/Header'
 import LogoHeader from './assets/logo/Logo-brainflix.svg'
 import MainVideo from './components/MainVideo'
-import CommentSection from './components/CommentSection/CommentSection'
-import ContentContainer from './components/ContentContainer'
+import Body from './components/Body'
+// import CommentSection from './components/CommentSection/CommentSection'
+// import ContentContainer from './components/ContentContainer'
 import VideoList from './components/VideoList/VideoList'
-import VideoListItems from './components/VideoList/VideoListItems'
-
-
-
+// import VideoListItems from './components/VideoList/VideoListItems'
 import './styles/app.css';
 
 // function App() {
@@ -118,9 +116,13 @@ class App extends Component {
     <>  
       <Header logo={LogoHeader} />
       <MainVideo video={mainVideo} />
+      <section className='content'>
+        <Body video={mainVideo} />
+        <VideoList videos={sidebarVideos} mainVideoID={mainVideo.id}/>
+      </section>
       {/* <ContentContainer video={mainVideo} /> */}
       {/* <CommentSection comments={mainVideo.comments}/> */}
-      <VideoList videos={sidebarVideos} mainVideoID={mainVideo.id}/>
+
     </>
     )
   }

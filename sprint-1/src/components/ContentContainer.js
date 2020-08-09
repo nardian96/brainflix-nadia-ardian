@@ -1,5 +1,5 @@
 import React from 'react'
-import CommentSection from './CommentSection/CommentSection'
+// import CommentSection from './CommentSection/CommentSection'
 
 const ContentContainer = (props) => {
     console.log(props)
@@ -21,7 +21,7 @@ const ContentContainer = (props) => {
             </div>
             <p className='description__text'>{props.video.description}</p>
         </section>
-        <CommentSection comments={props.video.comments}/>
+        {/* <CommentSection comments={props.video.comments}/> */}
     </>    
     )
 }

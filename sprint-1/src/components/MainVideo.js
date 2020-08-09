@@ -1,5 +1,6 @@
 import React from 'react'
-import ContentContainer from './ContentContainer';
+// import Body from './Body'
+// import ContentContainer from './ContentContainer';
 
 const MainVideo = (props) => {
     return (
@@ -8,7 +9,8 @@ const MainVideo = (props) => {
             <video className='video__item' id={props.video.id} poster={props.video.image}>
             </video>
         </div>
-        <ContentContainer video={props.video} />
+        {/* <Body video={props.video} /> */}
+        {/* <ContentContainer video={props.video} /> */}
     </>
     )
 }
