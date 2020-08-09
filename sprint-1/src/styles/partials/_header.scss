@@ -25,9 +25,16 @@ header {
         height: 3rem;
         display: flex;
         justify-content: center;
+
     }
     &__search {
         width: 100%;
+        ::placeholder {
+            background-image: url(../assets/icons/SVG/Icon-search.svg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            display: inline-block;
+        }
     }
 }
 
@@ -54,8 +61,11 @@ header {
 }
 
 .button {
-    width: 80%;
     @include button;
+    width: 80%;
+    background-image: url(../assets/icons/SVG/Icon-upload.svg);
+    background-repeat: no-repeat;
+    background-position: left;
 }
 
 //TABLET STYLING

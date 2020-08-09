@@ -1,4 +1,6 @@
 import React from 'react'
+import ViewsIcon from '../assets/icons/SVG/Icon-views.svg'
+import LikesIcon from '../assets/icons/SVG/Icon-likes.svg'
 // import CommentSection from './CommentSection/CommentSection'
 
 const ContentContainer = (props) => {
@@ -6,16 +8,22 @@ const ContentContainer = (props) => {
     return (
     <>
         <section>
-            <div className='video__description'>
+            <div className='main-video__description'>
                 <h1 className='description__header'>{props.video.title}</h1>
                 <div className='description__subheader'>
                     <div className='description__subheader-one'>
-                        <h5>{props.video.channel}</h5>
+                        <h5>By {props.video.channel}</h5>
                         <p>{props.video.timestamp}</p>
                     </div>
                     <div className='description__subheader-two'>
-                        <p>{props.video.views}</p>
-                        <p>{props.video.likes}</p>
+                        <div>
+                            <img src={ViewsIcon}/>
+                            <p>{props.video.views}</p>
+                        </div>
+                        <div>
+                            <img src={LikesIcon}/>
+                            <p>{props.video.likes}</p>
+                        </div>
                     </div>
                 </div>
             </div>
