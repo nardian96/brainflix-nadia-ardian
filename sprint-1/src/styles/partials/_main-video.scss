@@ -2,18 +2,96 @@
 
 .main-video {
     &__container {
-        width: 20rem;
+        min-width: 20rem;
         height: 11.43rem;
         background-color:black;
+        position:relative; 
     }
     &__item {
         object-fit: cover;
-        width: 100%;
+        min-width: 100%;
         height: 100%;
     }
     &__description {
         margin: 0 1rem;
         border-bottom: 2px solid $text-field-border;
+    }
+    &__controls {
+        position:absolute;
+        z-index: 99;
+        padding: 0 1rem;
+        bottom: 0.37rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.controls {
+    &__button {
+        width: 3.3rem;
+        padding: 0.62rem;
+        margin: 0 0.187rem;
+        border-radius: 0.4rem;
+        color: white;
+        background: rgba(black, 0.4);
+        border: unset;
+        box-shadow: unset;
+        &:hover,
+        &:focus,
+        &:active {
+            cursor: pointer;
+            background: rgba(black, 1);
+            outline: 0;
+        }
+    }
+    &__progress-bar {
+        position: relative;
+        flex-grow: 1;
+        margin: 0 0.18rem;
+        padding: 0.62rem;
+        border-radius: 0.4rem;
+        color: white;
+        background: rgba(black, 0.4);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__progress-timeline {
+        height: 0.2rem;
+        margin: 0 0.6rem;
+        background: black;
+        border-radius: 0.5rem;
+        flex-grow: 1;
+    }
+    &__progress-text {
+        display: none;
+    }
+    &__button-group {
+        display: flex;
+        width: 5rem;
+        padding-right: 0.7rem;
+        margin: 0 0.187rem;
+        border-radius: 0.6rem;
+        color: white;
+        background: rgba(black, 0.4);
+        border: unset;
+        box-shadow: unset;
+        &:hover,
+        &:focus,
+        &:active {
+            cursor: pointer;
+            background: rgba(black, 0.6);
+            outline: 0;
+        }
+        &--item {
+            width: 3.3rem;
+            padding: 0 0.7rem;
+            color: white;
+            background: rgba(black, 0);
+            border: unset;
+            box-shadow: unset;
+        }
     }
 }
 
@@ -61,10 +139,10 @@
 @include tablet {
     .main-video {
         &__container {
-            width: 48rem;
+            min-width: 48rem;
             height: 25rem;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
         }
         &__item {
             object-fit: cover;
@@ -76,7 +154,27 @@
             display: flex;
             flex-direction: column;
         }
+        &__controls {
+            width: 43.75rem;
+            padding: 0 0.5rem;
+        }
     }
+
+    .controls {
+        &__progress-bar {
+            position: relative;
+            width: 32.43rem;
+            flex-grow: 0.93;
+            margin: 0 1rem;
+        }
+        &__progress-text {
+            display: inline-block;
+            text-align: center;
+            font-family: 'Avenir-Regular';
+            font-size: 0.7rem;
+        }
+    }
+
     .description {
         &__header {
             margin: 3rem 0 1.5rem;
@@ -103,13 +201,22 @@
         &__container {
             width: 90rem;
             height: 33.75rem;
-            padding-left: 11.25rem;
-            padding-right: 11.25rem;
+            padding-left: 15.5rem;
+            padding-right: 15.5rem;
         }
         &__item {
             object-fit: cover;
             width: 100%;
             height: 100%;
+        }
+        &__controls {
+            width: 59rem;
+            padding: 0 1rem;
+        }
+    }
+    .controls {
+        &__progress-bar {
+            width: 46.93rem;
         }
     }
 }

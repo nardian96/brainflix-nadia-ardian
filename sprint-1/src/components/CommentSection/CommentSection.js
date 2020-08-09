@@ -23,13 +23,6 @@ const CommentSection = (props) => {
                 {props.comments.map((comment) => (
                     <CommentData key={comment.id} commentData={comment} />
                 ))}
-                    {/* {props.comments.map((comment) => (
-                    <li key={comment.id}>
-                        <div>{comment.name}</div>
-                        <div>{comment.date}</div>
-                        <div>{comment.content}</div> 
-                    </li>
-                ))} */}
             </ul>
         </section>
     )
