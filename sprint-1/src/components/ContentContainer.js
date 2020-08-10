@@ -1,7 +1,6 @@
 import React from 'react'
 import ViewsIcon from '../assets/icons/SVG/Icon-views.svg'
 import LikesIcon from '../assets/icons/SVG/Icon-likes.svg'
-// import CommentSection from './CommentSection/CommentSection'
 
 const ContentContainer = (props) => {
     console.log(props)
@@ -29,7 +28,6 @@ const ContentContainer = (props) => {
             </div>
             <p className='description__text'>{props.video.description}</p>
         </section>
-        {/* <CommentSection comments={props.video.comments}/> */}
     </>    
     )
 }

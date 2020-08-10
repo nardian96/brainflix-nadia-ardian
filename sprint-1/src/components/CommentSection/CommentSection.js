@@ -5,8 +5,8 @@ import CommentData from '../CommentSection/CommentData'
 const CommentSection = (props) => {
     return (
         <section className='comment__section'>
-            <p>
-                3 comments
+            <p className='comment__counter'>
+                3 Comments
             </p>
             <div className='comment__input'>
                 <div className='extra-padding'>

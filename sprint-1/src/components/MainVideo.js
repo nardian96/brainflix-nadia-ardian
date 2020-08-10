@@ -13,7 +13,6 @@ const MainVideo = (props) => {
                     <div className='controls__progress-timeline'></div>
                     <div className='controls__progress-text'>0:00 / 0:42</div>
                 </div>
-                {/* <div className='controls__button-group'> */}
                 <div className='controls__button-group'>    
                     <button className='controls__button-group--item'><img src={ExpandButton}/></button>
                     <button className='controls__button-group--item'><img src={VolumeButton}/></button>

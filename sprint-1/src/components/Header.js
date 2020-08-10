@@ -2,9 +2,7 @@ import React from 'react';
 import SearchBar from './SearchBar';
 import Button from './Button'
 import UserPicture from './UserPicture';
-
-
-import '../styles/app.css';
+// import '../styles/app.css';
 
 const Header = (props) => {
     const buttonValue = `UPLOAD`

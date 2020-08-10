@@ -4,11 +4,16 @@
     &__section {
         margin: 0 1rem;
     }
+    &__counter {
+        font-family: 'Avenir-Demi';
+        font-size: 1rem;
+        margin: 0;
+    }
     &__input {
         padding-top: 2rem;
         padding-bottom: 1.5rem;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     &__data {
         list-style-type: none;
@@ -28,6 +33,7 @@
                 font-size: 0.75rem;
                 padding-bottom: 3px;
                 color: $label-text;
+                font-family: 'Avenir-Demi';
             }
         }
     }
@@ -51,7 +57,7 @@
 
 .data {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 1.5rem 0 1.5rem;
     border-top: 2px solid $text-field-border;
     &__content {
@@ -116,4 +122,24 @@
             }
         }
     } 
+}
+
+// DESKTOP STYLING
+@include desktop {
+    .comment {
+        &__section {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .data {
+        &__content {
+            padding-left: 0.5rem;
+        }
+    }
+    .description {
+        &__header {
+            font-size: 2.4rem;
+        }
+    }
 }

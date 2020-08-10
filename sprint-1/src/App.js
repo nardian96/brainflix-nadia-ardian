@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
-// import { v4 as uuidv4 } from 'uuid'
 import Header from './components/Header'
 import LogoHeader from './assets/logo/Logo-brainflix.svg'
 import MainVideo from './components/MainVideo'
 import Body from './components/Body'
-// import CommentSection from './components/CommentSection/CommentSection'
-// import ContentContainer from './components/ContentContainer'
 import VideoList from './components/VideoList/VideoList'
-// import VideoListItems from './components/VideoList/VideoListItems'
 import './styles/app.css';
 
-// function App() {
 
 class App extends Component {
   state = {
@@ -106,7 +101,6 @@ class App extends Component {
 
 
   }
-// };
     
   render() {
 
@@ -120,13 +114,10 @@ class App extends Component {
         <Body video={mainVideo} />
         <VideoList videos={sidebarVideos} mainVideoID={mainVideo.id}/>
       </section>
-      {/* <ContentContainer video={mainVideo} /> */}
-      {/* <CommentSection comments={mainVideo.comments}/> */}
 
     </>
     )
   }
 };
-// }
 
 export default App;
