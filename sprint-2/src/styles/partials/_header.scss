@@ -1,0 +1,151 @@
+//MOBILE STYLING
+
+header {
+    padding: 0 1rem;
+    min-width: 20rem;
+}
+.header {
+    &__container {
+        display:flex;
+        flex-direction: column;
+        align-items: center; 
+        width: 100%;
+    }
+    &__logo-container {
+        width: 8rem;
+        height: 3rem;
+    }
+    &__logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__search-container {
+        width: 100%;
+        height: 3rem;
+        position: relative;
+    }
+    &__search {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.25rem;
+        border: 1px solid $text-field-border;
+        padding-left: 3rem;
+    }
+    &__search-icon {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+}
+
+.subheader {
+    &__container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0.5rem 0 1rem;
+    }
+}
+
+.button {
+    &__container {
+        position: relative;
+        width: 14rem;
+    }
+    &__item {
+        position: absolute;
+        @include button;
+        width: 100%;
+        height: 100%;
+    }
+    &__item-icon {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        z-index: 99;
+        top: 1rem;
+        left: 3.5rem;
+    }
+}
+
+//TABLET STYLING
+@include tablet {
+    header {
+        padding: 0 1.5rem;
+        width: 48rem;
+    }
+    .header {
+        &__container {
+            width: 100%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__logo-container {
+            width: 8rem;
+            height: 3rem;
+            margin-right: 5rem;
+        }
+        &__search-container {
+            width: 17rem;
+            height: 3rem;
+            display: flex;
+            justify-content: center;
+        }
+        &__search {
+            width: 100%;
+        }
+    }
+     
+    .subheader {
+        &__container {
+            margin: 0;
+            width: 13rem;
+            justify-content: space-around;
+        }
+    }
+
+    .button {
+        &__container {
+            width: 7rem;
+        }
+        &__item {
+            padding-left: 2rem;
+            font-size: 0.9rem;
+        }
+        &__item-icon {
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            z-index: 99;
+            top: 1rem;
+            left: 1rem;
+        }
+    }
+}
+
+//DESKTOP STYLING
+@include desktop {
+    header {
+        padding: 0 11.25rem;
+        width: 90rem;
+    }
+    .header {
+        &__logo-container {
+            margin-right: 32rem
+        }
+    }
+    .subheader {
+        &__container {
+            width: 14rem;
+            padding-left: 1.5rem;
+        }
+    }
+    .button {
+        &__item {
+            margin-right: 1.5rem;
+        }
+    }
+}
