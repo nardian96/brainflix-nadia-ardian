@@ -19,11 +19,11 @@ const CommentSection = (props) => {
                     <button type ="submit" className="input__button">COMMENT</button>
                 </form>
             </div>
-            <ul className='comment__data'>
+            {/* <ul className='comment__data'>
                 {props.comments.map((comment) => (
                     <CommentData key={comment.id} commentData={comment} />
                 ))}
-            </ul>
+            </ul> */}
         </section>
     )
 }
