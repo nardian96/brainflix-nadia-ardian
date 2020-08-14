@@ -38,14 +38,15 @@ displayVideoByID = (id) => {
   Axios.get(appendKey(`https://project-2-api.herokuapp.com/videos/${id}`))
   .then((response) => {
     let video = response.data
-    console.log(video)
+    // console.log(video)
     this.setState({
       mainVideo: video
     })
   });
-}
+} 
 
 componentDidMount() {
+    console.log('Component First Mount')
     this.displaySideBarVid().then(() => {
       // console.log(this.state)
     this.displayVideoByID(this.state.sidebarVideos[0].id)
@@ -82,9 +83,10 @@ componentDidMount() {
 
 
   componentDidUpdate(prevProps, prevState) {
-    // console.log('this is props on first mount:', prevProps)
+    console.log('this is props on first mount:', prevProps)
     // console.log(prevProps.match.params.id)
     // console.log(this.props.match.params.id)
+    //Note: to avoid infinite loop, you want to ONLY update state if certain conditions are true
     if (prevProps.match.params.id !== this.props.match.params.id) {
       this.displayVideoByID(this.props.match.params.id)
     }

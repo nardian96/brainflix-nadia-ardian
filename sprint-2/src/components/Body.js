@@ -3,7 +3,6 @@ import ContentContainer from './ContentContainer'
 import CommentSection from './CommentSection/CommentSection'
 
 const Body = (props) => {
-
     return (
     <section className='subcontent'>
         <ContentContainer video={props.video}/>

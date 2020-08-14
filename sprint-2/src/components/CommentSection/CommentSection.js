@@ -3,10 +3,9 @@ import UserPicture from '../UserPicture'
 import CommentData from '../CommentSection/CommentData'
 
 const CommentSection = (props) => {
-    // console.log(comments)
  
     if(!props.comments) {
-        return <h1>LOADING COMMENTS</h1>
+        return <h1>LOADING DATA</h1>
     } else {
     return (
         <section className='comment__section'>

@@ -1,6 +1,7 @@
 import React from 'react'
 import LogoHeader from './assets/logo/Logo-brainflix.svg'
 import Header from './components/Header'
+import Image from './assets/images/Upload-video-preview.jpg'
 import './styles/app.css';
 
 
@@ -14,7 +15,7 @@ function Upload() {
             <h1>Upload Video</h1>
             <div className='upload__input'>
                 <div className='thumbnail__container thumbnail__container--header'>
-                    {/* <img src='#' alt='Thumbnail'/> */}
+                    <img src={Image} alt='Thumbnail'/>
                 </div>
                 <form>
                     <div className='title__container title__container--header'>
