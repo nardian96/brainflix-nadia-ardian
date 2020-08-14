@@ -3,6 +3,11 @@ import UserPicture from '../UserPicture'
 import CommentData from '../CommentSection/CommentData'
 
 const CommentSection = (props) => {
+    // console.log(comments)
+ 
+    if(!props.comments) {
+        return <h1>LOADING COMMENTS</h1>
+    } else {
     return (
         <section className='comment__section'>
             <p className='comment__counter'>
@@ -19,13 +24,13 @@ const CommentSection = (props) => {
                     <button type ="submit" className="input__button">COMMENT</button>
                 </form>
             </div>
-            {/* <ul className='comment__data'>
-                {props.comments.map((comment) => (
-                    <CommentData key={comment.id} commentData={comment} />
-                ))}
-            </ul> */}
+            <ul className='comment__data'>
+                {props.comments.map((comment) => {
+                return <CommentData key={comment.id} commentData={comment} />
+                })}
+            </ul>
         </section>
-    )
+    )}
 }
 
 export default CommentSection

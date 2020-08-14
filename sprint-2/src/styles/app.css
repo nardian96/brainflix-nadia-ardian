@@ -769,4 +769,182 @@ header {
     padding-bottom: 0.5rem;
   }
 }
+
+.upload__section {
+  padding: 0 1rem;
+  border-top: 2px solid #E1E1E1;
+}
+
+.upload__section h1 {
+  margin: 1.5rem 0 2rem;
+}
+
+.upload__button {
+  width: 100%;
+  height: 2.7rem;
+  background-color: #0095FF;
+  color: #FFFFFF;
+  font-family: 'Avenir-Demi';
+  border: none;
+  border-radius: 5px;
+}
+
+.upload__cancel {
+  font-family: 'Avenir-Demi';
+  color: #0065AD;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.thumbnail__container {
+  width: 100%;
+  height: 9.56rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.thumbnail__container--header::before {
+  content: "VIDEO THUMBNAIL";
+  font-size: 0.75rem;
+  padding-bottom: 3px;
+  color: #AFAFAF;
+  font-family: 'Avenir-Demi';
+}
+
+.title__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.title__container--header::before {
+  content: "TITLE YOUR VIDEO";
+  font-size: 0.75rem;
+  padding-bottom: 3px;
+  color: #AFAFAF;
+  font-family: 'Avenir-Demi';
+}
+
+.title__box {
+  width: 100%;
+  height: 3.5rem;
+  border: 2px solid #E1E1E1;
+  border-radius: 5px;
+  padding: 1rem 0.75rem 0;
+  margin-bottom: 1.5rem;
+  font-family: 'Avenir-Regular';
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+}
+
+.description__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.description__container--header::before {
+  content: "ADD A VIDEO DESCRIPTION";
+  font-size: 0.75rem;
+  padding-bottom: 3px;
+  color: #AFAFAF;
+  font-family: 'Avenir-Demi';
+}
+
+.description__box {
+  width: 100%;
+  height: 8.93rem;
+  border: 2px solid #E1E1E1;
+  border-radius: 5px;
+  padding: 1rem 0.75rem 0;
+  margin-bottom: 2rem;
+  font-family: 'Avenir-Regular';
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .upload__section {
+    padding: 0 1.5rem;
+    border-top: 2px solid #E1E1E1;
+  }
+  .upload__section h1 {
+    margin: 0;
+    padding: 3rem 0 2rem;
+    border-bottom: 2px solid #E1E1E1;
+  }
+  .upload__button-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 2rem;
+    border-top: 2px solid #E1E1E1;
+  }
+  .upload__button {
+    width: 10rem;
+    height: 2.7rem;
+    margin-left: 3rem;
+    background-color: #0095FF;
+    color: #FFFFFF;
+    font-family: 'Avenir-Demi';
+    border: none;
+    border-radius: 5px;
+  }
+  .upload__cancel {
+    margin: 1.5rem 0;
+  }
+  .thumbnail__container {
+    margin-top: 2.5rem;
+    width: 21.5rem;
+    height: 11.43rem;
+  }
+  .description__box {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .upload__section {
+    padding: 0 11.25rem;
+  }
+  .upload__input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .upload__input form {
+    width: 44.5rem;
+    margin: 2.5rem 0;
+  }
+  .description__box {
+    margin: 0;
+    height: 5.87rem;
+  }
+}
 /*# sourceMappingURL=app.css.map */

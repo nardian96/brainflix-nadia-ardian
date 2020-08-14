@@ -1,0 +1,163 @@
+// MOBILE STYLING
+
+.upload {
+    &__section {
+        padding: 0 1rem;
+        border-top: 2px solid $text-field-border;
+        h1 {
+            margin: 1.5rem 0 2rem;
+        }
+    }
+    &__button {
+        width: 100%;
+        height: 2.7rem;
+        @include button;
+    }
+    &__cancel {
+        font-family: 'Avenir-Demi';
+        color: $cancel-text-color;
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+}
+
+.thumbnail {
+    &__container { 
+        width: 100%;
+        height: 9.56rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        &--header {
+            &::before {
+                content: "VIDEO THUMBNAIL";
+                font-size: 0.75rem;
+                padding-bottom: 3px;
+                color: $label-text;
+                font-family: 'Avenir-Demi';
+            }
+        }
+    }
+}
+
+.title {
+    &__container { 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        &--header {
+            &::before {
+                content: "TITLE YOUR VIDEO";
+                font-size: 0.75rem;
+                padding-bottom: 3px;
+                color: $label-text;
+                font-family: 'Avenir-Demi';
+            }
+        }
+    }
+    &__box {
+        width: 100%;
+        height: 3.5rem;
+        border: 2px solid $border-color-upload;
+        border-radius: 5px;
+        padding: 1rem 0.75rem 0;
+        margin-bottom: 1.5rem;
+        font-family: 'Avenir-Regular';
+        font-size: 0.85rem;
+        line-height: 1.3rem;
+    }
+}
+
+.description {
+    &__container { 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        &--header {
+            &::before {
+                content: "ADD A VIDEO DESCRIPTION";
+                font-size: 0.75rem;
+                padding-bottom: 3px;
+                color: $label-text;
+                font-family: 'Avenir-Demi';
+            }
+        }
+    }
+    &__box {
+        width: 100%;
+        height: 8.93rem;
+        border: 2px solid $border-color-upload;
+        border-radius: 5px;
+        padding: 1rem 0.75rem 0;
+        margin-bottom: 2rem;
+        font-family: 'Avenir-Regular';
+        font-size: 0.85rem;
+        line-height: 1.3rem;
+    }
+}
+
+//TABLET STYLING
+@include tablet {
+    .upload {
+        &__section {
+            padding: 0 1.5rem;
+            border-top: 2px solid $text-field-border;
+            h1 {
+                margin: 0;
+                padding: 3rem 0 2rem;
+                border-bottom: 2px solid $text-field-border;
+            }
+        }
+        &__button-wrapper {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 2px solid $text-field-border;
+        }
+        &__button {
+            width: 10rem;
+            height: 2.7rem;
+            margin-left: 3rem;
+            @include button;
+        }
+        &__cancel {
+            margin: 1.5rem 0;
+        }
+    }
+    .thumbnail {
+        &__container { 
+            margin-top: 2.5rem;
+            width: 21.5rem;
+            height: 11.43rem;
+        }
+    }
+    .description {
+        &__box {
+            margin-bottom: 2.5rem;
+        }
+    }      
+}
+
+//DESKTOP STYLING
+@include desktop {
+    .upload {
+        &__section {
+            padding: 0 11.25rem;
+        }
+        &__input {
+            display: flex;
+            justify-content: space-between;
+            form {
+                width: 44.5rem;
+                margin: 2.5rem 0;
+            }
+        }
+    }
+    .description {
+        &__box {
+            margin: 0;
+            height: 5.87rem;
+        }
+    }
+}

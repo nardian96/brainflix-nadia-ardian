@@ -5,7 +5,7 @@ const SearchBar = () => {
     return (
         <form className="header__search-container">
             <label htmlFor="header__search" className="header__search-icon">
-                <img src={SearchIcon}/>
+                <img src={SearchIcon} alt='Search Icon'/>
             </label>
             <input className="header__search" type="search" name="searchbar" placeholder="Search"></input>
         </form>

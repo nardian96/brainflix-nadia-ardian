@@ -3,7 +3,7 @@ import ViewsIcon from '../assets/icons/SVG/Icon-views.svg'
 import LikesIcon from '../assets/icons/SVG/Icon-likes.svg'
 
 const ContentContainer = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
     <>
         <section>
@@ -16,11 +16,11 @@ const ContentContainer = (props) => {
                     </div>
                     <div className='description__subheader-two'>
                         <div>
-                            <img src={ViewsIcon}/>
+                            <img src={ViewsIcon} alt='Views Icon'/>
                             <p>{props.video.views}</p>
                         </div>
                         <div>
-                            <img src={LikesIcon}/>
+                            <img src={LikesIcon} alt='Likes Icon'/>
                             <p>{props.video.likes}</p>
                         </div>
                     </div>
