@@ -16,7 +16,7 @@ const appendKey = (url) => {
 const apiKey = '96b4adfb-61bb-4bf3-a395-5056c79948fc';
 const apiVideos = appendKey('https://project-2-api.herokuapp.com/videos');
 
-//CLASS-BASED COMPONENT
+
 class Video extends Component {
 
 state = {
@@ -31,64 +31,37 @@ displaySideBarVid = () => {
       sidebarVideos: response.data
     })
   })
-)  
-}
+)}
 
 displayVideoByID = (id) => {
+  if (id === undefined) {
+    id = "1af0jruup5gu"
+  };
   Axios.get(appendKey(`https://project-2-api.herokuapp.com/videos/${id}`))
   .then((response) => {
     let video = response.data
-    // console.log(video)
     this.setState({
       mainVideo: video
     })
   });
 } 
 
+
 componentDidMount() {
-    console.log('Component First Mount')
-    this.displaySideBarVid().then(() => {
-      // console.log(this.state)
-    this.displayVideoByID(this.state.sidebarVideos[0].id)
-  })
+  this.displaySideBarVid().then(() => {
+  if(this.props.match.params.id !== undefined){
+     this.displayVideoByID(this.props.match.params.id);
+  } else {
+    this.displayVideoByID();
+  }
+})
 }
-
-// componentDidMount() {
-//   //Axios call to get list of sidebarVideos
-//   Axios.get(apiVideos)
-//   .then((response) => {
-//     let videos = response.data
-//     console.log(response)
-//     this.setState({
-//       sidebarVideos: response.data
-//     }, 
-//     () => this.displayVideoByID(this.state.sidebarVideos[0].id)
-//     )
-//   }).then(() => 
-//     this.displayVideoByID(this.state.sidebarVideos[0].id)
-//   )
-// };
-
-// displayVideoByID = (id) => {
-//   Axios.get(appendKey(`https://project-2-api.herokuapp.com/videos/${id}`))
-//   .then((response) => {
-//     let video = response.data
-//     console.log(video)
-//     this.setState({
-//       mainVideo: video
-//     })
-//   });
-// }
-
 
 
   componentDidUpdate(prevProps, prevState) {
-    console.log('this is props on first mount:', prevProps)
-    // console.log(prevProps.match.params.id)
-    // console.log(this.props.match.params.id)
-    //Note: to avoid infinite loop, you want to ONLY update state if certain conditions are true
-    if (prevProps.match.params.id !== this.props.match.params.id) {
-      this.displayVideoByID(this.props.match.params.id)
+    const { params } = this.props.match
+    if (prevProps.match.params.id !== params.id) {
+      this.displayVideoByID(params.id)
     }
   }
 
@@ -96,18 +69,16 @@ componentDidMount() {
 
     
   render() {
-    // const {mainVideo } = this.state.mainVideo;
-    // const { sidebarVideos } = this.state.sidebarVideos;
-    // console.log(this.props)
+    const { mainVideo , sidebarVideos } = this.state;
+
 
     return (
     <>  
       <Header logo={LogoHeader} />
       <MainVideo video={this.state.mainVideo} />
       <section className='content'>
-        {/* {this.state.mainVideo && <Body video={this.state.mainVideo} />} */}
         <Body video={this.state.mainVideo} />
-        <VideoList videos={this.state.sidebarVideos} mainVideoID={this.state.mainVideo.id}/>
+        <VideoList videos={sidebarVideos} mainVideoID={mainVideo.id}/>
       </section>
 
     </>

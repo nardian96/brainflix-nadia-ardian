@@ -1,9 +1,12 @@
 import React from 'react'
 import ViewsIcon from '../assets/icons/SVG/Icon-views.svg'
 import LikesIcon from '../assets/icons/SVG/Icon-likes.svg'
+import dateFormat, { timeAgo } from '../dateFormat'
 
 const ContentContainer = (props) => {
-    // console.log(props)
+    const date = dateFormat(props.video.timestamp)
+    const dynamicDate = timeAgo(date)
+
     return (
     <>
         <section>
@@ -12,7 +15,7 @@ const ContentContainer = (props) => {
                 <div className='description__subheader'>
                     <div className='description__subheader-one'>
                         <h5>By {props.video.channel}</h5>
-                        <p>{props.video.timestamp}</p>
+                        <p>{dynamicDate}</p>
                     </div>
                     <div className='description__subheader-two'>
                         <div>

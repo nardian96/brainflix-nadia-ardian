@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function VideoListItems(props) {
-    // console.log(props.videoItem.image)
     return (
         <li className="video__item">
             <Link to={`/video/${props.videoItem.id}`}>

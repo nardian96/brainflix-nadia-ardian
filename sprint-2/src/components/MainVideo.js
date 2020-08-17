@@ -4,7 +4,6 @@ import ExpandButton from '../assets/icons/SVG/Icon-fullscreen.svg'
 import VolumeButton from '../assets/icons/SVG/Icon-volume.svg'
 
 const MainVideo = (props) => {
-    console.log(props)
     return (
     <>    
         <section className='main-video__container' >

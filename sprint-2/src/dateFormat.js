@@ -1,5 +1,4 @@
 function dateFormat(dateInput) {
-    console.log(Date.now())
     const date = new Date(dateInput)
     let months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
     let formattedDate = `${months[date.getMonth()]}/${date.getDate()}/${date.getFullYear()}`;
@@ -23,9 +22,6 @@ export const timeAgo = (dateParam) => {
     
     if (isMoreThanAYear) {
         return `${yearsDiff} years ago`
-    }
-    else {
-        console.log('why')
     }
 }
 
