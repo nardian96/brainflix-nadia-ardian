@@ -1,7 +1,7 @@
 import React from 'react' 
-import PlayButton from '../assets/icons/SVG/Icon-play.svg'
-import ExpandButton from '../assets/icons/SVG/Icon-fullscreen.svg'
-import VolumeButton from '../assets/icons/SVG/Icon-volume.svg'
+import PlayButton from '../../assets/icons/SVG/Icon-play.svg'
+import ExpandButton from '../../assets/icons/SVG/Icon-fullscreen.svg'
+import VolumeButton from '../../assets/icons/SVG/Icon-volume.svg'
 
 const MainVideo = (props) => {
     return (

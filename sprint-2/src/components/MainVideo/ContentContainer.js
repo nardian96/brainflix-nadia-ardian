@@ -1,7 +1,7 @@
 import React from 'react'
-import ViewsIcon from '../assets/icons/SVG/Icon-views.svg'
-import LikesIcon from '../assets/icons/SVG/Icon-likes.svg'
-import dateFormat, { timeAgo } from '../dateFormat'
+import ViewsIcon from '../../assets/icons/SVG/Icon-views.svg'
+import LikesIcon from '../../assets/icons/SVG/Icon-likes.svg'
+import dateFormat, { timeAgo } from '../../dateFormat'
 
 const ContentContainer = (props) => {
     const date = dateFormat(props.video.timestamp)

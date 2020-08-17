@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Header from './components/Header'
 import LogoHeader from './assets/logo/Logo-brainflix.svg'
-import MainVideo from './components/MainVideo'
-import Body from './components/Body'
-import VideoList from './components/VideoList/VideoList'
+import MainVideo from './components/MainVideo/MainVideo'
+import VideoDetails from './components/MainVideo/VideoDetails'
+import VideoList from './components/SidebarVideos/VideoList'
 import Axios from 'axios';
 import './styles/app.css';
 
@@ -77,7 +77,7 @@ componentDidMount() {
       <Header logo={LogoHeader} />
       <MainVideo video={this.state.mainVideo} />
       <section className='content'>
-        <Body video={this.state.mainVideo} />
+        <VideoDetails video={this.state.mainVideo} />
         <VideoList videos={sidebarVideos} mainVideoID={mainVideo.id}/>
       </section>
 

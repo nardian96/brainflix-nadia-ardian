@@ -1,16 +1,19 @@
 import React from 'react'
 import UserPicture from '../UserPicture'
 import CommentData from '../CommentSection/CommentData'
+import commentCounter from '../../commentCounter'
 
 const CommentSection = (props) => {
+
  
     if(!props.comments) {
         return <h1>LOADING DATA</h1>
     } else {
+    let commentCount = commentCounter(props.comments)
     return (
         <section className='comment__section'>
             <p className='comment__counter'>
-                3 Comments
+                {commentCount} Comments
             </p>
             <div className='comment__input'>
                 <div className='extra-padding'>

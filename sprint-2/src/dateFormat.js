@@ -5,13 +5,6 @@ function dateFormat(dateInput) {
     return formattedDate;
 }
 
-//named export
-// export const dateSort = (formattedDate) => {
-//     let sortedDates = formattedDate.slice().sort((a, b) => b.date - a.date);
-//     return sortedDates;
-// }
-
-//named export
 export const timeAgo = (dateParam) => {
     const date = typeof dateParam === 'object' ? dateParam : new Date(dateParam);
     const today = new Date();
@@ -27,6 +20,3 @@ export const timeAgo = (dateParam) => {
 
 
 export default dateFormat
-
-//Another way: create a class object with multiple methods that you can import as class.function
-//Functional vs class approach
