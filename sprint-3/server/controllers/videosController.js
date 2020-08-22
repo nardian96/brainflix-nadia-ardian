@@ -2,10 +2,10 @@ const videos = require('../models/videosModel');
 
 
 // get list of videos 
-function listVideo (req, res) {
+function listVideos (req, res) {
     //Calling the function to read into the json file, turning it into JS array of objects, 
     //, mapping each object within the array to return a new array w set properties
-    loadVidData((videos) => {
+    videos.loadVidData((videos) => {
         const sideBarVideos = videos.map((videoObj) =>{
             return {
                 id: videoObj.id,
@@ -21,7 +21,7 @@ function listVideo (req, res) {
 // get video by ID
 function getVideoByID(req, res) {
     const vidId = req.params.id
-    loadVidData((videos) => {
+    videos.loadVidData((videos) => {
         const vidIndex = videos.findIndex((vidObj) => vidObj.id === vidId)
         if (vidIndex !== -1) {
             res.json(videos[vidIndex])
@@ -41,12 +41,12 @@ function addVideo(req, res) {
             requiredProperties: ['title', 'description', 'url']
         });
     }
-    res.json(uploadVideo(req.body));
+    res.json(videos.uploadVideo(req.body));
 }
 
 // export multiple functions
 module.exports = {
-    listVideo,
+    listVideos,
     getVideoByID,
     addVideo
 }
