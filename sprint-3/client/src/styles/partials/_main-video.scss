@@ -1,0 +1,236 @@
+//MOBILE STYLING
+
+.main-video {
+    &__container {
+        min-width: 20rem;
+        height: 11.43rem;
+        background-color:black;
+        position:relative; 
+    }
+    &__item {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    &__description {
+        margin: 0 1rem;
+        border-bottom: 2px solid $text-field-border;
+    }
+    &__controls {
+        position:absolute;
+        z-index: 99;
+        padding: 0 1rem;
+        bottom: 0.37rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.controls {
+    &__button {
+        width: 3.3rem;
+        padding: 0.62rem;
+        margin: 0 0.187rem;
+        border-radius: 0.4rem;
+        color: white;
+        background: rgba(black, 0.4);
+        border: unset;
+        box-shadow: unset;
+        &:hover,
+        &:focus,
+        &:active {
+            cursor: pointer;
+            background: rgba(black, 1);
+            outline: 0;
+        }
+    }
+    &__progress-bar {
+        position: relative;
+        flex-grow: 1;
+        margin: 0 0.18rem;
+        padding: 0.62rem;
+        border-radius: 0.4rem;
+        color: white;
+        background: rgba(black, 0.4);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__progress-timeline {
+        height: 0.2rem;
+        margin: 0 0.6rem;
+        background: black;
+        border-radius: 0.5rem;
+        flex-grow: 1;
+    }
+    &__progress-text {
+        display: none;
+    }
+    &__button-group {
+        display: flex;
+        width: 5rem;
+        padding-right: 0.7rem;
+        margin: 0 0.187rem;
+        border-radius: 0.6rem;
+        color: white;
+        background: rgba(black, 0.4);
+        border: unset;
+        box-shadow: unset;
+        &:hover,
+        &:focus,
+        &:active {
+            cursor: pointer;
+            background: rgba(black, 0.6);
+            outline: 0;
+        }
+        &--item {
+            width: 3.3rem;
+            padding: 0 0.7rem;
+            color: white;
+            background: rgba(black, 0);
+            border: unset;
+            box-shadow: unset;
+        }
+    }
+}
+
+.description {
+    &__header {
+        margin: 2rem 0 1rem;
+    }
+    &__subheader-one {
+        display: flex;
+        min-width: 10rem;
+        p {
+            margin: 0;
+            padding-top: 2px;
+            padding-left: 0.5rem;
+        }
+        h5 {
+            margin: 0;
+            font-size: 0.87rem;
+            font-family: 'Avenir-Demi'
+        }
+    }
+    &__subheader-two {
+        display:flex;
+        width: 11.5rem;
+        justify-content: space-between;
+        padding: 2rem 0 1.5rem;
+        div {
+            display: flex;
+            p {
+                margin: 0;
+            }
+            img {
+                padding-right: 0.5rem;
+            }
+        }
+
+    }
+    &__text {
+        margin: 1.5rem 1rem 2.5rem 1rem;
+    }
+}
+
+//TABLET STYLING 
+
+@include tablet {
+    .main-video {
+        &__container {
+            min-width: 48rem;
+            height: 25rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        &__item {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        &__description {
+            margin: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+        &__controls {
+            width: 43.75rem;
+            padding: 0 0.5rem;
+        }
+    }
+
+    .controls {
+        &__progress-bar {
+            position: relative;
+            width: 32.43rem;
+            flex-grow: 0.93;
+            margin: 0 1rem;
+        }
+        &__progress-text {
+            display: inline-block;
+            text-align: center;
+            font-family: 'Avenir-Regular';
+            font-size: 0.7rem;
+        }
+    }
+
+    .description {
+        &__header {
+            margin: 3rem 0 1.5rem;
+        }
+        &__subheader {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__subheader-two {
+            padding-top: 0;
+        }
+        &__text {
+            margin: 2.5rem 1.5rem 4rem 1.5rem;
+            padding-right: 14.5rem;
+            line-height: 1.25rem;
+        }
+    }
+}
+
+//DESKTOP STYLING
+
+@include desktop {
+    .main-video {
+        &__container {
+            width: 90rem;
+            height: 33.75rem;
+            padding-left: 15.5rem;
+            padding-right: 15.5rem;
+        }
+        &__item {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        &__controls {
+            width: 59rem;
+            padding: 0 1rem;
+        }
+        &__description {
+            padding: 0 1.5rem;
+            margin: 0;
+        }
+    }
+
+    .controls {
+        &__progress-bar {
+            width: 46.93rem;
+        }
+    }
+
+    .description {
+        &__header {
+            font-size: 2.3rem;
+        }
+        &__text {
+            padding-right: 12rem;
+        }
+    }
+}
