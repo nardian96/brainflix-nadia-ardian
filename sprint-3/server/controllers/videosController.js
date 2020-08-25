@@ -3,8 +3,6 @@ const videos = require('../models/videosModel');
 
 // get list of videos 
 function listVideos (req, res) {
-    //Calling the function to read into the json file, turning it into JS array of objects, 
-    //, mapping each object within the array to return a new array w set properties
     videos.loadVidData((videos) => {
         const sideBarVideos = videos.map((videoObj) =>{
             return {
@@ -32,13 +30,25 @@ function getVideoByID(req, res) {
     })
 }
 
-// upload new video
+// post video comments
+function addComment(req, res) {
+    console.log(req.params)
+    console.log(req.body)
+    const vidId = req.params.id
+    if (videos.findVideo(req.params.id).length === 0) {
+        res.sendStatus(404)
+    } else {
+        videos.postNewComment(vidId, req.body)
+        res.sendStatus(200)
+    }
+}
 
+// upload new video
 function addVideo(req, res) {
-    if (!req.body.title || !req.body.description || !req.body.url) {
+    if (!req.body.title || !req.body.description) {
         res.status(400).json({
             error: 'POST body must contain all requiredProperties',
-            requiredProperties: ['title', 'description', 'url']
+            requiredProperties: ['title', 'description']
         });
     }
     res.json(videos.uploadVideo(req.body));
@@ -48,5 +58,6 @@ function addVideo(req, res) {
 module.exports = {
     listVideos,
     getVideoByID,
+    addComment,
     addVideo
 }

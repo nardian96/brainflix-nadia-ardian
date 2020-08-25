@@ -399,8 +399,9 @@ header {
 
 .description__subheader-one p {
   margin: 0;
-  padding-top: 2px;
+  padding-top: 1px;
   padding-left: 0.5rem;
+  font-size: 0.87rem;
 }
 
 .description__subheader-one h5 {
@@ -670,7 +671,7 @@ header {
   }
   .data__content {
     width: 39rem;
-    padding-left: 0;
+    padding-left: 1rem;
     padding-right: 2.8rem;
     margin-right: 1.2rem;
   }
@@ -770,9 +771,6 @@ header {
     padding: 2.5rem 0 1rem 1rem;
     margin: 0;
     border-left: 2px solid #E1E1E1;
-  }
-  .video__item {
-    height: 7.5rem;
   }
   .video__item-text h4 {
     padding-bottom: 0.5rem;

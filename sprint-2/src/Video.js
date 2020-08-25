@@ -13,7 +13,8 @@ const appendKey = (url) => {
   return apiURL
 }
 
-const apiKey = '96b4adfb-61bb-4bf3-a395-5056c79948fc';
+// const apiKey = '96b4adfb-61bb-4bf3-a395-5056c79948fc';
+const apiKey = '3d34d4d2-1d32-478d-b8c0-a08fc378cc67'
 const apiVideos = appendKey('https://project-2-api.herokuapp.com/videos');
 
 
@@ -46,6 +47,26 @@ displayVideoByID = (id) => {
   });
 } 
 
+// postNewComments = (event, messageValue) => {
+//   event.preventDefault()
+//   const id = this.state.mainVideo.id
+//   if (id !== undefined) {
+//     // const messageValue = this.state.mainVideo.comment.value;
+//     if (messageValue !== "") {
+//       const apiComments = appendKey(`https://project-2-api.herokuapp.com/videos/${id}/comments`)
+//       Axios.post(apiComments, {
+//         name: 'Mohan Murunge',
+//         comment: messageValue
+//       })
+//       .then((response) => {
+//         // event.reset();
+//         this.displayVideoByID(id)
+//         console.log(event)
+//       })
+//     }
+//   };
+// }
+
 
 componentDidMount() {
   this.displaySideBarVid().then(() => {
@@ -58,12 +79,12 @@ componentDidMount() {
 }
 
 
-  componentDidUpdate(prevProps, prevState) {
-    const { params } = this.props.match
-    if (prevProps.match.params.id !== params.id) {
-      this.displayVideoByID(params.id)
-    }
+componentDidUpdate(prevProps, prevState) {
+  const { params } = this.props.match
+  if (prevProps.match.params.id !== params.id) {
+    this.displayVideoByID(params.id)
   }
+}
 
 
 
@@ -77,7 +98,7 @@ componentDidMount() {
       <Header logo={LogoHeader} />
       <MainVideo video={this.state.mainVideo} />
       <section className='content'>
-        <VideoDetails video={this.state.mainVideo} />
+        <VideoDetails video={this.state.mainVideo} displayVideo={this.displayVideoByID}/>
         <VideoList videos={sidebarVideos} mainVideoID={mainVideo.id}/>
       </section>
 

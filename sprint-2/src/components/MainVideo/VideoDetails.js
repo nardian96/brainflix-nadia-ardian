@@ -6,7 +6,7 @@ const Body = (props) => {
     return (
     <section className='subcontent'>
         <ContentContainer video={props.video}/>
-        <CommentSection comments={props.video.comments} />
+        <CommentSection id= {props.video.id} comments={props.video.comments} displayVideo={props.displayVideo} />
     </section>    
     )
 }

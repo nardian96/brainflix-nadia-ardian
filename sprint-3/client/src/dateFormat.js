@@ -16,6 +16,12 @@ export const timeAgo = (dateParam) => {
     if (isMoreThanAYear) {
         return `${yearsDiff} years ago`
     }
+    if (today) {
+        return `today`
+    }
+    else {
+        return `this week`
+    }
 }
 
 

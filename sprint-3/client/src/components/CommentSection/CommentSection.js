@@ -4,14 +4,6 @@ import CommentData from '../CommentSection/CommentData'
 import commentCounter from '../../commentCounter'
 import Axios from 'axios'
 
-//FUNCTION TO APPEND API KEY TO URL REQUEST
-const appendKey = (url) => {
-    let apiURL = `${url}?api_key=${apiKey}`
-    return apiURL
-  }
-  
-// const apiKey = '96b4adfb-61bb-4bf3-a395-5056c79948fc';
-const apiKey = '3d34d4d2-1d32-478d-b8c0-a08fc378cc67'
 
 class CommentSection extends Component {
 
@@ -23,17 +15,14 @@ class CommentSection extends Component {
         this.setState( {
             comments: event.target.value
         })
-
     }
-
 
     postNewComments = (event, messageValue) => {
         event.preventDefault()
         const id = this.props.id
         if (id !== undefined) {
-          // const messageValue = this.state.mainVideo.comment.value;
           if (messageValue !== "") {
-            const apiComments = appendKey(`https://project-2-api.herokuapp.com/videos/${id}/comments`)
+            const apiComments = `http://localhost:8080/videos/${id}/comments`
             Axios.post(apiComments, {
               name: 'Mohan Murunge',
               comment: messageValue
@@ -41,7 +30,6 @@ class CommentSection extends Component {
             .then((response) => {
               this.form.reset();
               this.props.displayVideo(id)
-            //   console.log(event)
             })
           }
         };
